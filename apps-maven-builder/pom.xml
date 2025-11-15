@@ -60,8 +60,8 @@
     </properties>
 
     <modules>
-        <module>devmode-quarkus-app</module>
-        <module>devmode-maven-repo</module>
+<!--        <module>devmode-quarkus-app</module>-->
+<!--        <module>devmode-maven-repo</module>-->
         <module>builder-quarkus-app</module>
         <module>builder-maven-repo</module>
     </modules>
@@ -135,26 +135,26 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <inherited>false</inherited>
                 <executions>
-                    <execution>
-                        <id>devmode-quarkus-app</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>${project.basedir}/build-quarkus-app.sh</executable>
-                            <arguments>
-                                <argument>${build.quarkusapp.argument.imagename.devmode}</argument>
-                                <argument>${build.quarkusapp.argument.quarkusplatform.groupid}</argument>
-                                <argument>${build.quarkusapp.argument.quarkusplatform.version}</argument>
-                                <argument>${build.quarkusapp.argument.kogitoversion}</argument>
-                                <argument>${build.quarkusapp.argument.maven-plugins-gav}</argument>
-                                <argument>${build.quarkusapp.argument.properties-with-versions}</argument>
-                                <argument>${build.quarkusapp.argument.quarkus-extensions-extra-deps}</argument>
-                                <argument>${build.quarkusapp.argument.quarkus.version}</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
+<!--                    <execution>-->
+<!--                        <id>devmode-quarkus-app</id>-->
+<!--                        <phase>compile</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>exec</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <executable>${project.basedir}/build-quarkus-app.sh</executable>-->
+<!--                            <arguments>-->
+<!--                                <argument>${build.quarkusapp.argument.imagename.devmode}</argument>-->
+<!--                                <argument>${build.quarkusapp.argument.quarkusplatform.groupid}</argument>-->
+<!--                                <argument>${build.quarkusapp.argument.quarkusplatform.version}</argument>-->
+<!--                                <argument>${build.quarkusapp.argument.kogitoversion}</argument>-->
+<!--                                <argument>${build.quarkusapp.argument.maven-plugins-gav}</argument>-->
+<!--                                <argument>${build.quarkusapp.argument.properties-with-versions}</argument>-->
+<!--                                <argument>${build.quarkusapp.argument.quarkus-extensions-extra-deps}</argument>-->
+<!--                                <argument>${build.quarkusapp.argument.quarkus.version}</argument>-->
+<!--                            </arguments>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
                     <execution>
                         <id>builder-quarkus-app</id>
                         <phase>compile</phase>

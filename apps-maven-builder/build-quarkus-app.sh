@@ -42,6 +42,17 @@ properties_with_versions="${6}"
 quarkus_extensions_extra_deps="${7}"
 quarkus_version="${8:-${quarkus_platform_version}}"
 
+echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+echo "1: $image_name"
+
+echo "2: $quarkus_platform_groupid"
+echo "3: $quarkus_platform_version"
+echo "4: $kogito_version"
+echo "5: $maven_plugins_gav"
+echo "6: $properties_with_versions"
+echo "7: $quarkus_extensions_extra_deps"
+echo "8: $quarkus_version"
+
 # common extensions used by the osl-swf-builder and osl-swf-devmode
 quarkus_extensions="smallrye-health,org.apache.kie.sonataflow:sonataflow-quarkus:${kogito_version},org.kie:kie-addons-quarkus-knative-eventing:${kogito_version},org.kie:kogito-addons-quarkus-microprofile-config-service-catalog:${kogito_version},org.kie:kie-addons-quarkus-kubernetes:${kogito_version},org.kie:kogito-addons-quarkus-knative-serving:${kogito_version},org.kie:kie-addons-quarkus-process-management:${kogito_version},org.kie:kie-addons-quarkus-source-files:${kogito_version},org.kie:kie-addons-quarkus-monitoring-prometheus:${kogito_version},org.kie:kie-addons-quarkus-monitoring-sonataflow:${kogito_version}"
 # dev mode purpose extensions used only by the osl-swf-devmode
